@@ -1,5 +1,5 @@
 //
-//  ANCounter.swift
+//  ANCountUpTimer.swift
 //  ANTimer
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,23 +20,23 @@
 
 import Dispatch
 
-public typealias ANCounterHandler = (Int) -> Void
+public typealias ANCountUpTimerHandler = (ANCountUpTimer, Int) -> Void
 
-public class ANCounter {
+public class ANCountUpTimer {
     
     private let timer: ANTimer
     private var count: Int = 0
-    private var handler: ANCounterHandler
+    private var handler: ANCountUpTimerHandler
     
     public init(interval: DispatchTimeInterval = .seconds(1),
                 queue: DispatchQueue = .main,
-                handler: @escaping ANCounterHandler) {
+                handler: @escaping ANCountUpTimerHandler) {
         self.timer = ANTimer.repeaticTimer(interval: interval, queue: queue, handler: { _ in })
         self.handler = handler
         self.timer.reschedule { [weak self] _ in
             guard let strongSelf = self else { return }
             let count = strongSelf.count
-            strongSelf.handler(count)
+            strongSelf.handler(strongSelf, count)
             strongSelf.count = 0
         }
     }

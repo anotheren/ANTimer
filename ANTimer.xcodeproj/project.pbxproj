@@ -12,7 +12,7 @@
 		A050A0C621ABCA0200FDBDF9 /* ANTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = A050A0B821ABCA0200FDBDF9 /* ANTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A050A0D421ABCBB800FDBDF9 /* Ex+DispatchTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = A050A0D321ABCBB800FDBDF9 /* Ex+DispatchTimeInterval.swift */; };
 		A050A0DA21ABCCF700FDBDF9 /* ANTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A050A0D621ABCCF700FDBDF9 /* ANTimer.swift */; };
-		A050A0DB21ABCCF700FDBDF9 /* ANCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A050A0D721ABCCF700FDBDF9 /* ANCounter.swift */; };
+		A050A0DB21ABCCF700FDBDF9 /* ANCountUpTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A050A0D721ABCCF700FDBDF9 /* ANCountUpTimer.swift */; };
 		A050A0DC21ABCCF700FDBDF9 /* ANTimer+Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A050A0D821ABCCF700FDBDF9 /* ANTimer+Throttle.swift */; };
 		A072727421AF79C0001C857D /* ANCountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072727321AF79C0001C857D /* ANCountDownTimer.swift */; };
 		A0C24E2D21AF7C42005B93E7 /* ANTimerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C24E2B21AF7C42005B93E7 /* ANTimerBase.swift */; };
@@ -38,7 +38,7 @@
 		A050A0C521ABCA0200FDBDF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A050A0D321ABCBB800FDBDF9 /* Ex+DispatchTimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+DispatchTimeInterval.swift"; sourceTree = "<group>"; };
 		A050A0D621ABCCF700FDBDF9 /* ANTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTimer.swift; sourceTree = "<group>"; };
-		A050A0D721ABCCF700FDBDF9 /* ANCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANCounter.swift; sourceTree = "<group>"; };
+		A050A0D721ABCCF700FDBDF9 /* ANCountUpTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANCountUpTimer.swift; sourceTree = "<group>"; };
 		A050A0D821ABCCF700FDBDF9 /* ANTimer+Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ANTimer+Throttle.swift"; sourceTree = "<group>"; };
 		A072727021AF791E001C857D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A072727121AF7923001C857D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 			children = (
 				A050A0D621ABCCF700FDBDF9 /* ANTimer.swift */,
 				A050A0D821ABCCF700FDBDF9 /* ANTimer+Throttle.swift */,
+				A050A0D721ABCCF700FDBDF9 /* ANCountUpTimer.swift */,
 				A072727321AF79C0001C857D /* ANCountDownTimer.swift */,
-				A050A0D721ABCCF700FDBDF9 /* ANCounter.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				A050A0DA21ABCCF700FDBDF9 /* ANTimer.swift in Sources */,
 				A050A0D421ABCBB800FDBDF9 /* Ex+DispatchTimeInterval.swift in Sources */,
 				A072727421AF79C0001C857D /* ANCountDownTimer.swift in Sources */,
-				A050A0DB21ABCCF700FDBDF9 /* ANCounter.swift in Sources */,
+				A050A0DB21ABCCF700FDBDF9 /* ANCountUpTimer.swift in Sources */,
 				A0C24E2D21AF7C42005B93E7 /* ANTimerBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
