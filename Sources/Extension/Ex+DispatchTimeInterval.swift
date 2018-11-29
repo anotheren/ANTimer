@@ -1,5 +1,5 @@
 //
-//  ANTimer.h
+//  Ex+DispatchTimeInterval.swift
 //  ANTimer
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,14 +18,13 @@
 //  Copyright © 2018 anotheren.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+import Dispatch
 
-//! Project version number for ANTimer.
-FOUNDATION_EXPORT double ANTimerVersionNumber;
+extension DispatchTimeInterval: ANTimerCompatible { }
 
-//! Project version string for ANTimer.
-FOUNDATION_EXPORT const unsigned char ANTimerVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <ANTimer/PublicHeader.h>
-
-
+extension ANTimerBase where TimerObject == DispatchTimeInterval {
+    
+    public static func from(seconds: Double) -> DispatchTimeInterval {
+        return .milliseconds(Int(seconds * 1000))
+    }
+}

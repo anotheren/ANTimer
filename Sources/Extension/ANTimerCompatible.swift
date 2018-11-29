@@ -1,5 +1,5 @@
 //
-//  ANTimer.h
+//  ANTimerCompatible.swift
 //  ANTimer
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,14 +18,28 @@
 //  Copyright © 2018 anotheren.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+import Foundation
 
-//! Project version number for ANTimer.
-FOUNDATION_EXPORT double ANTimerVersionNumber;
+protocol ANTimerCompatible {
+    
+    associatedtype TimerCompatibleType
+    
+    static var timer: ANTimerBase<TimerCompatibleType>.Type { get }
+    
+    var timer: ANTimerBase<TimerCompatibleType> { get }
+}
 
-//! Project version string for ANTimer.
-FOUNDATION_EXPORT const unsigned char ANTimerVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <ANTimer/PublicHeader.h>
-
-
+extension ANTimerCompatible {
+    
+    static var timer: ANTimerBase<Self>.Type {
+        get {
+            return ANTimerBase<Self>.self
+        }
+    }
+    
+    var timer: ANTimerBase<Self> {
+        get {
+            return ANTimerBase(base: self)
+        }
+    }
+}

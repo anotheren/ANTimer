@@ -61,7 +61,7 @@ class ANTimerTests: XCTestCase {
         var count = 0
         let timer = ANTimer.repeaticTimer(interval: .seconds(1)) { _ in
             
-            ANTimer.debounce(interval: .from(seconds: 1.5), identifier: "not pass") { [weak expectation] in
+            ANTimer.debounce(interval: DispatchTimeInterval.timer.from(seconds: 1.5), identifier: "not pass") { [weak expectation] in
                 //even testDebounce success. the internal timer won't stop.
                 //it will cause another test method fail
                 //I think XCTest framework should not call fail if XCFail is not in other test method
@@ -70,7 +70,7 @@ class ANTimerTests: XCTestCase {
                 }
             }
             
-            ANTimer.debounce(interval: .from(seconds: 0.5), identifier:  "pass") {
+            ANTimer.debounce(interval: DispatchTimeInterval.timer.from(seconds: 0.5), identifier:  "pass") {
                 count = count + 1
                 if count == 4 {
                     expectation.fulfill()
@@ -87,8 +87,8 @@ class ANTimerTests: XCTestCase {
         
         var count = 0
         var temp = 0
-        let timer = ANTimer.repeaticTimer(interval: .from(seconds: 0.1)) { _ in
-            ANTimer.throttle(interval: .from(seconds: 1), identifier: "throttle", handler: {
+        let timer = ANTimer.repeaticTimer(interval: DispatchTimeInterval.timer.from(seconds: 0.1)) { _ in
+            ANTimer.throttle(interval: DispatchTimeInterval.timer.from(seconds: 1), identifier: "throttle", handler: {
                 count = count + 1
                 if count > 3 {
                     XCTFail("should not pass")
@@ -143,8 +143,8 @@ class ANTimerTests: XCTestCase {
         let expectation = self.expectation(description: "test count down timer")
         
         let label = UILabel()
-        
-        let timer = ANCountDownTimer(interval: .from(seconds: 0.1), times: 10) { _, leftTimes in
+        let interval = DispatchTimeInterval.timer.from(seconds: 0.1)
+        let timer = ANCountDownTimer(interval: interval, times: 10) { _, leftTimes in
             label.text = "\(leftTimes)"
             print(label.text!)
             if label.text == "0" {

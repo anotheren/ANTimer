@@ -1,5 +1,5 @@
 //
-//  ANTimer.h
+//  ANTimerBase.swift
 //  ANTimer
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,14 +18,13 @@
 //  Copyright © 2018 anotheren.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+import Foundation
 
-//! Project version number for ANTimer.
-FOUNDATION_EXPORT double ANTimerVersionNumber;
-
-//! Project version string for ANTimer.
-FOUNDATION_EXPORT const unsigned char ANTimerVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <ANTimer/PublicHeader.h>
-
-
+public struct ANTimerBase<TimerObject> {
+    
+    public let base: TimerObject
+    
+    public init(base: TimerObject) {
+        self.base = base
+    }
+}
