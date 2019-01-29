@@ -48,6 +48,10 @@ public class ANCountDownTimer {
         }
     }
     
+    public func fire() {
+        timer.fire()
+    }
+    
     public func start() {
         timer.start()
     }
