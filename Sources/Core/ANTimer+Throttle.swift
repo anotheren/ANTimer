@@ -22,7 +22,7 @@ import Dispatch
 
 public typealias ANThrottleTimerHandler = () -> Void
 
-public extension ANTimer {
+extension ANTimer {
     
     private static var workItems = [String: DispatchWorkItem]()
     
