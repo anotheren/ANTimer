@@ -40,6 +40,7 @@
 		A050A0D621ABCCF700FDBDF9 /* ANTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTimer.swift; sourceTree = "<group>"; };
 		A050A0D721ABCCF700FDBDF9 /* ANCountUpTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANCountUpTimer.swift; sourceTree = "<group>"; };
 		A050A0D821ABCCF700FDBDF9 /* ANTimer+Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ANTimer+Throttle.swift"; sourceTree = "<group>"; };
+		A068AB09236992A000C6D765 /* ANTimer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ANTimer.podspec; sourceTree = "<group>"; };
 		A072727021AF791E001C857D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A072727121AF7923001C857D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A072727321AF79C0001C857D /* ANCountDownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANCountDownTimer.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 			children = (
 				A072727021AF791E001C857D /* LICENSE */,
 				A072727121AF7923001C857D /* README.md */,
+				A068AB09236992A000C6D765 /* ANTimer.podspec */,
 				A050A0B721ABCA0200FDBDF9 /* Sources */,
 				A050A0C221ABCA0200FDBDF9 /* Tests */,
 				A050A0B621ABCA0200FDBDF9 /* Products */,
@@ -409,6 +411,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANTimer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -439,6 +442,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANTimer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
